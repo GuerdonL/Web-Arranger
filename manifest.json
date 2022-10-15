@@ -1,17 +1,14 @@
 {
-    "manifest_version": 2,
-    "name": "Test Extension",
-    "version": "0.0",
-  
-    "background": {
-      "persistent": false,
-      "scripts": ["background.js"]
-    },
-    "content_scripts": [{
-      "js": ["content.js"]
-    }],
-    "browser_action": {
-      "default_title": "web arrange"
-    },
-    "permissions": ["activeTab"]
+  "name": "Web Arranger",
+  "version": "1.0",
+  "description": "Make the web accessible!",
+  "permissions": ["declarativeContent","storage","activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
 }
