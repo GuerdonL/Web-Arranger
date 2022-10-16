@@ -12,3 +12,14 @@ chrome.runtime.onInstalled.addListener(function() {
       }]);
     });
   });
+
+// on load, inject content.js into current tab
+window.onload = function() {
+    // get the current tab
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        // send a request to content.js to run the script
+        chrome.tabs.executeScript(
+            tabs[0].id,
+            {file: 'content.js'});
+    });
+};
