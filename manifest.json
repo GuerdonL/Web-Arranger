@@ -13,7 +13,7 @@
   "manifest_version": 2,
 
   "icons": {
-    "48": "border-48.png",
-    "96": "border-96.png"
+    "48": "icons/border-48.png",
+    "96": "icons/border-96.png"
   }
 }
